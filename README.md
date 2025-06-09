@@ -13,31 +13,34 @@ Here’s a clean and polished version of your SQL-based data analysis steps, alo
 
 Data Analysis Using SQL
 
-✅ **1. Show all customer records:**
+## 🗃️ Data Cleaning and Analysis
 
+Here’s a summary of the SQL-based data exploration and cleaning steps that I used :
+
+### ✅ Shows all customer records
 ```sql
 SELECT * FROM sales.transactions;
-```
+````
 
-✅ **2. Show total number of customers:**
+### ✅ Shows the total number of customers
 
 ```sql
 SELECT COUNT(*) FROM sales.transactions;
 ```
 
-✅ **3. Show transactions for Chennai market (market code for Chennai is 'Mark001'):**
+### ✅ Shows the transactions for Chennai market (market code 'Mark001')
 
 ```sql
 SELECT * FROM sales.transactions WHERE market_code = 'Mark001';
 ```
 
-✅ **4. Show distinct product codes that were sold in Chennai:**
+### ✅ Shows the distinct product codes that were sold in Chennai
 
 ```sql
 SELECT DISTINCT product_code FROM sales.transactions WHERE market_code = 'Mark001';
 ```
 
-✅ **5. Show transactions in 2020 (joined with date table):**
+### ✅ Shows the transactions in 2020 (joined with date table)
 
 ```sql
 SELECT sales.transactions.*, sales.date.* 
@@ -46,7 +49,7 @@ INNER JOIN sales.date ON sales.transactions.order_date = sales.date.date
 WHERE sales.date.year = 2020;
 ```
 
-✅ **6. Show total revenue in year 2020:**
+### ✅ Shows the total revenue in year 2020
 
 ```sql
 SELECT SUM(transactions.sales_amount) 
@@ -55,7 +58,7 @@ INNER JOIN sales.date ON sales.transactions.order_date = sales.date.date
 WHERE sales.date.year = 2020;
 ```
 
-✅ **7. Show total revenue in year 2020, January month:**
+### ✅ Shows the total revenue in year 2020, January month
 
 ```sql
 SELECT SUM(transactions.sales_amount) 
@@ -64,7 +67,7 @@ INNER JOIN sales.date ON sales.transactions.order_date = sales.date.date
 WHERE sales.date.year = 2020 AND sales.date.month_name = 'January';
 ```
 
-✅ **8. Show total revenue in year 2020 in Chennai:**
+### ✅ Shows the total revenue in year 2020 in Chennai
 
 ```sql
 SELECT SUM(transactions.sales_amount) 
@@ -75,4 +78,12 @@ WHERE sales.date.year = 2020 AND sales.transactions.market_code = 'Mark001';
 
 ---
 
-Would you like me to format this as a document for your project report or add some commentary? Let me know!
+## 📊 Dashboard
+
+The interactive dashboard was designed in Tableau Desktop (free trial) and visualized key performance indicators, store-level comparisons, and revenue trends. The dashboard itself is not accessible post-trial, but the key insights are available in the included PPT.
+
+---
+
+Feel free to explore the repository, and let me know if you’d like to contribute or have any questions!
+
+```
