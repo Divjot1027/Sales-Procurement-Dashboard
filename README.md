@@ -7,7 +7,6 @@ Designed an interactive Tableau dashboard to visualize KPIs, store-level compari
 
 Used a free trial of Tableau Desktop to create the dashboard, but after the trial ended, I was only able to retain the PowerPoint presentation (PPT) that showcases the final visualizations and insights.
 
-Here’s a clean and polished version of your SQL-based data analysis steps, along with the corresponding queries:
 
 ---
 
